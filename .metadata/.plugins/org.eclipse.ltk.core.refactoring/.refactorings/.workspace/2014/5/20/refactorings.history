@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;Anax-MVC&apos;" deleteContents="false" description="Delete resource &apos;Anax-MVC&apos;" element1="/Anax-MVC" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1399993077885"/>
+</session>
