@@ -20,8 +20,36 @@ return [
         
         'regions' => [
         	'text'	=> 'Regioner',
-        	'url'	=> 'regions.php',
+        	'url'	=> 'regioner',
         	'title'	=> 'Här va det regioner. Regioner va det här!'
+        ],
+        
+        // This is a menu item
+        'grid'  => [
+        	'text'  => 'Rutnät',   
+            'url'   => 'grid',
+            'title' => 'Visa rutnätet',
+        ],
+         
+        // This is a menu item
+        'typography'  => [
+            'text'  => 'Typografi',   
+            'url'   => 'typografi',
+            'title' => 'Typografi',
+        ],
+         
+        // This is a menu item
+        'font-awesome' => [
+            'text'  =>'Font Awesome', 
+            'url'   =>'font-awesome',  
+            'title' => 'Testa Font Awesome',
+        ],
+        
+        // This is a menu item
+        'source' => [
+            'text'  =>'Källkod', 
+            'url'   =>'source',  
+            'title' => 'Visa källkod',
         ],
 
     ],
