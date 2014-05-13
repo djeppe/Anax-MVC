@@ -60,7 +60,8 @@ return [
         'title_append' => ' | Anax a web template',
 
         // Stylesheets
-        'stylesheets' => ['css/style.css', 'css/navbar_tema.css', 'css/Flaticon/flaticon.css'],
+        //'stylesheets' => ['css/style.css', 'css/navbar_tema.css', 'css/Flaticon/flaticon.css'],
+        'stylesheets' => ['css/anax-grid/style.php'],
 
         // Inline style
         'style' => null,

@@ -12,10 +12,16 @@ return [
     'items' => [
 
         // This is a menu item
-        'home'  => [
+        'theme'  => [
             'text'  => 'Tema',   
             'url'   => '',  
             'title' => 'Här va det tema. Tema va det!'
+        ],
+        
+        'regions' => [
+        	'text'	=> 'Regioner',
+        	'url'	=> 'regions.php',
+        	'title'	=> 'Här va det regioner. Regioner va det här!'
         ],
 
     ],
