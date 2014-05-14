@@ -3,8 +3,17 @@
 <head>
 <meta charset='utf-8'/>
 <title><?=$title . $title_append?></title>
+<?php if(isset($favicon)): ?><link rel='shortcut icon' href='<?=$this->url->asset($favicon)?>'/><?php endif; ?>
+<?php foreach($stylesheets as $stylesheet): ?>
+<link rel='stylesheet' type='text/css' href='<?=$this->url->asset($stylesheet)?>'/>
+<?php endforeach; ?>
+<?php if(isset($style)): ?><style><?=$style?></style><?php endif; ?>
+<script src='<?=$this->url->asset($modernizr)?>'></script>
+</head>
 
 <div id='wrapper'>
+
+<div id='header'><?php $this->views->render('header')?></div>
 
 <?php if ($this->views->hasContent('navbar')) :?>
 <div id='navbar'><?php $this->views->render('navbar')?></div>
@@ -52,5 +61,4 @@
 
 </div>
 
-</head>
 </html>
