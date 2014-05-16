@@ -66,6 +66,20 @@ $app->router->add('typografi', function() use ($app) {
 
 });
 
+$app->router->add('font-awesome', function() use ($app) {
+
+    $app->theme->setTitle("Font Awesome");
+
+    $content = $app->fileContent->get('fontawesome.html');
+
+    $app->views->add('welcome/page', ['content' => $content]);
+    
+    $content = $app->fileContent->get('fontawesome_sidebar.html');
+    $app->views->add('welcome/page', ['content' => $content], 'sidebar');
+
+});
+
+
 $app->router->add('source', function() use ($app) {
     
     $app->theme->addStylesheet('css/source.css');

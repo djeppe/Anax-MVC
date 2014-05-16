@@ -13,7 +13,7 @@ return [
 
         // This is a menu item
         'theme'  => [
-            'text'  => 'Tema',   
+            'text'  => '<i class="fa fa-home"></i> Tema',   
             'url'   => '',  
             'title' => 'Här va det tema. Tema va det!'
         ],

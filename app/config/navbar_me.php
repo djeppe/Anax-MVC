@@ -45,6 +45,13 @@ return [
                 ],
             ],*/
         ],
+        
+        // This is a menu item
+        'theme' => [
+            'text'  =>'Tema', 
+            'url'   =>'theme',  
+            'title' => 'Mitt Tema'
+        ],
  
         // This is a menu item
         'about' => [
