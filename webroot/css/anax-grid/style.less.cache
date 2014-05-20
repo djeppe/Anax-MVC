@@ -1,4 +1,4 @@
-a:4:{s:4:"root";s:10:"style.less";s:8:"compiled";s:35417:"html {
+a:4:{s:4:"root";s:10:"style.less";s:8:"compiled";s:35457:"html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -602,6 +602,9 @@ hr {
   border-color: #ccc;
   margin: 22px auto;
 }
+.navbar {
+  background: grey;
+}
 .navbar ul {
   list-style: none;
   margin: 0;
@@ -627,8 +630,8 @@ hr {
 }
 .navbar li.selected-parent,
 .navbar li.selected {
-  color: #22f;
-  border-color: #22f;
+  color: orange;
+  border-color: orange;
 }
 .navbar ul ul {
   background-color: #fff;
@@ -649,8 +652,8 @@ hr {
   border-color: #666;
 }
 .navbar li li.selected {
-  color: #22f;
-  border-color: #22f;
+  color: orange;
+  border-color: orange;
 }
 figure {
   margin: 0;
@@ -2312,4 +2315,4 @@ figure.rounded img {
     margin-bottom: 22px;
   }
 }
-";s:5:"files";a:23:{s:67:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/style.less";i:1400251257;s:71:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/normalize.less";i:1399646639;s:71:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/variables.less";i:1400077223;s:68:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/mixins.less";i:1400075039;s:66:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/grid.less";i:1399993421;s:71:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/structure.less";i:1400248911;s:72:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/typography.less";i:1400074166;s:68:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/navbar.less";i:1399644501;s:68:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/figure.less";i:1400075591;s:99:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/font-awesome.less";i:1400067450;s:96:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/variables.less";i:1400246028;s:93:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/mixins.less";i:1400067450;s:91:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/path.less";i:1400067450;s:91:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/core.less";i:1400067450;s:93:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/larger.less";i:1400067450;s:98:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/fixed-width.less";i:1400067450;s:91:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/list.less";i:1400067450;s:102:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/bordered-pulled.less";i:1400067450;s:95:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/spinning.less";i:1400067450;s:102:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/rotated-flipped.less";i:1400067450;s:94:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/stacked.less";i:1400067450;s:92:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/icons.less";i:1400067450;s:72:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/responsive.less";i:1400253631;}s:7:"updated";i:1400253655;}
+";s:5:"files";a:23:{s:67:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/style.less";i:1400251257;s:71:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/normalize.less";i:1399646639;s:71:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/variables.less";i:1400077223;s:68:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/mixins.less";i:1400075039;s:66:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/grid.less";i:1399993421;s:71:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/structure.less";i:1400248911;s:72:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/typography.less";i:1400074166;s:68:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/navbar.less";i:1400599746;s:68:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/figure.less";i:1400075591;s:99:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/font-awesome.less";i:1400067450;s:96:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/variables.less";i:1400246028;s:93:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/mixins.less";i:1400067450;s:91:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/path.less";i:1400067450;s:91:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/core.less";i:1400067450;s:93:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/larger.less";i:1400067450;s:98:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/fixed-width.less";i:1400067450;s:91:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/list.less";i:1400067450;s:102:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/bordered-pulled.less";i:1400067450;s:95:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/spinning.less";i:1400067450;s:102:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/rotated-flipped.less";i:1400067450;s:94:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/stacked.less";i:1400067450;s:92:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/Font-Awesome-master/less/icons.less";i:1400067450;s:72:"/Applications/MAMP/htdocs/Anax-MVC/webroot/css/anax-grid/responsive.less";i:1400253631;}s:7:"updated";i:1400599748;}

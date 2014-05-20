@@ -50,7 +50,35 @@ return [
         'theme' => [
             'text'  =>'Tema', 
             'url'   =>'theme',  
-            'title' => 'Mitt Tema'
+            'title' => 'Mitt Tema',
+            
+            // Here we add the submenu, with some menu items, as part of a existing menu item
+            'submenu' => [
+
+                'items' => [
+
+                    // This is a menu item of the submenu
+                    'item 1'  => [
+                        'text'  => 'Regioner',   
+                        'url'   => 'regioner',  
+                        'title' => 'Tema: Regioner'
+                    ],
+
+                    // This is a menu item of the submenu
+                    'item 2'  => [
+                        'text'  => 'Rutnät',   
+                        'url'   => 'grid',  
+                        'title' => 'Tema: Grid'
+                    ],
+                    
+                    // This is a menu item of the submenu
+                    'item 3'  => [
+                        'text'  => 'Font Awesome',   
+                        'url'   => 'font-awesome',  
+                        'title' => 'Test av FontAwesome'
+                    ],
+                ],
+            ],            
         ],
  
         // This is a menu item
