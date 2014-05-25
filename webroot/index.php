@@ -7,6 +7,8 @@ $app->theme->configure(ANAX_APP_PATH . 'config/theme-grid.php');
 
 $app->theme->addStylesheet('css/anax-grid/Flaticon/flaticon.css');
 
+$app->url->setUrlType(\Anax\Url\CUrl::URL_CLEAN);
+
 $di->set('CommentController', function() use ($di) {
     $controller = new Phpmvc\Comment\CommentController();
     $controller->setDI($di);
@@ -23,10 +25,43 @@ $app->router->add('', function() use ($app) {
     $byline = $app->fileContent->get('byline.md');
     $byline = $app->textFilter->doFilter($byline, 'shortcode, markdown');
     
-    $app->views->add('me/page', [
+    /*$app->views->add('me/page', [
         'content' => $content,
         'byline' => $byline,
+    ]);*/
+    
+	$app->views->add('me/page', [
+		'content' => '',
+		'byline'  => null,
+	], 'flash');
+	
+	$app->views->add('me/theme', [
+		'content' => $content,
+		'byline'  => $byline,
+	], 'main');
+	
+	$app->views->add('me/theme', [
+		'content' => '',
+		'byline'  => null,
+	], 'sidebar');
+	
+    $app->dispatcher->forward([
+        'controller' => 'comment',
+        'action'     => 'view',
     ]);
+
+    $app->views->add('comment/form', [
+        'mail'      => null,
+        'web'       => null,
+        'name'      => null,
+        'content'   => null,
+        'output'    => null,
+    ]);	
+	
+	$app->views->add('me/theme', [
+		'content' => $byline,
+		'byline'  => null,
+	], 'main');    
 });
 
 $app->router->add('redovisning', function() use ($app) {
@@ -39,10 +74,17 @@ $app->router->add('redovisning', function() use ($app) {
     $byline = $app->fileContent->get('byline.md');
     $byline = $app->textFilter->doFilter($byline, 'shortcode, markdown');
     
+    $links = $app->fileContent->get('redovisning-links.html');
+    
     $app->views->add('me/page', [
-        'content' => $content,
-        'byline' => $byline
-    ]);
+		'content' => $content,
+		'byline'  => $byline,
+	], 'main');
+	
+	$app->views->add('me/theme', [
+		'content' => $links,
+		'byline'  => $byline,
+	], 'sidebar');
     
     $app->dispatcher->forward([
         'controller' => 'comment',
@@ -66,25 +108,57 @@ $app->router->add('theme', function() use ($app) {
     $byline = $app->fileContent->get('byline.md');
     $byline = $app->textFilter->doFilter($byline, 'shortcode, markdown');
 
-	$app->views->add('me/page', [
-		'content' => 'Detta är flashen',
+	$app->views->add('me/theme', [
+		'content' => '<img width="940" alt="Landscape" src="http://www.phoenixdodgeball.com/wp-content/uploads/2014/04/star-wars-banner.jpg">',
 		'byline'  => null,
 	], 'flash');
 	
 	$app->views->add('me/theme', [
-		'content' => 'Detta är featured-1',
+		'content' => '<a href="regioner"><img src="img/drupal.png" alt="Här skulle varit en bild minsann."></a>',
 		'byline'  => null,
 	], 'featured-1');
 	
 	$app->views->add('me/theme', [
-		'content' => 'Detta är featured-2',
-		'byline'  => null,
+		'content' => '<a href="grid"><img src="img/semantic-grid.jpg" alt="Här skulle det också varit en bild. En fin bild."></a>',
+		'byline'  => $byline,
 	], 'featured-2');
 	
+	$img = $app->fileContent->get('f_img01.md');
 	$app->views->add('me/theme', [
-		'content' => 'Detta är featured-3',
+		'content' => '<a href="font-awesome"><img src="img/font-awesome.png" alt="Här skulle varit en bild."></a>',
 		'byline'  => null,
 	], 'featured-3');
+	
+	$app->views->add('me/theme', [
+		'content' => 'main',
+		'byline'  => null,
+	], 'main');
+	
+	$app->views->add('me/theme', [
+		'content' => 'sidebar',
+		'byline'  => null,
+	], 'sidebar');
+	
+	$content = $app->fileContent->get('triptych_01.md');
+    $content = $app->textFilter->doFilter($content, 'shortcode, markdown');
+	$app->views->add('me/theme', [
+		'content' => $content,
+		'byline'  => null,
+	], 'triptych-1');
+	
+	$content = $app->fileContent->get('triptych_02.md');
+    $content = $app->textFilter->doFilter($content, 'shortcode, markdown');
+	$app->views->add('me/theme', [
+		'content' => $content,
+		'byline'  => null,
+	], 'triptych-2');
+	
+	$content = $app->fileContent->get('triptych_03.md');
+    $content = $app->textFilter->doFilter($content, 'shortcode, markdown');
+	$app->views->add('me/theme', [
+		'content' => $content,
+		'byline'  => null,
+	], 'triptych-3');
 
 });
 
@@ -92,12 +166,6 @@ $app->router->add('regioner', function() use ($app) {
     
     $app->theme->addStylesheet('css/anax-grid/regions_demo.css');
     $app->theme->setTitle("Temat regioner");
-    
-	$slideshow = "huet alfred pa berget";
-
-    $app->views->add('me/theme', [
-        'content' => $slideshow,
-    ], 'flash');
     
     $app->views->addString('flash', 'flash')
                ->addString('featured-1', 'featured-1')
@@ -156,8 +224,6 @@ $app->router->add('source', function() use ($app) {
         'content' => $source->View()
         ]);
 });
-
-
 
 $app->router->handle();
 $app->theme->render();

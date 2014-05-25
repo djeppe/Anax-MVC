@@ -12,5 +12,26 @@
 #footer-col-3, 
 #footer-col-4 {
     min-height: 88px;
-    background-color: #ccc;
+    background-color: #ffffff;
+}
+
+#featured-1 img{
+	max-width:100%;
+	height:auto;
+}
+
+#featured-2 img{
+	max-width:100%;
+	height: auto;
+}
+
+#featured-3 img{
+	max-width:100%;
+	height:auto;
+}
+
+#triptych-1,
+#triptych-2,
+#triptych-3 {
+	width: 30%;
 }

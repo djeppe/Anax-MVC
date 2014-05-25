@@ -1,0 +1,5 @@
+...
+====================================
+The triptych form arises from early Christian art, and was a popular standard format for altar paintings from the Middle Ages onwards. Its geographical range was from the eastern Byzantine churches to the Celtic churches in the west. Renaissance painters and sculptors such as Hans Memling and Hieronymus Bosch used the form. Triptych forms also allow ease of transport.
+
+From the Gothic period onward, both in Europe and elsewhere, altarpieces in churches and cathedrals were often in triptych form. One such cathedral with an altarpiece triptych is Llandaff Cathedral. The Cathedral of Our Lady in Antwerp, Belgium, contains two examples by Rubens, and Notre Dame de Paris is another example of the use of triptych in architecture. One can also see the form echoed by the structure of many ecclesiastical stained glass windows. Although strongly identified as an altarpiece form, triptychs outside that context have been created, some of the best-known examples being works by Hieronymus Bosch, Max Beckmann, and Francis Bacon.

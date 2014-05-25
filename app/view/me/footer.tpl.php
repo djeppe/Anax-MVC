@@ -1,5 +1,6 @@
 <footer>
 <span class='sitefooter_me'>
+<hr>
 Copyright (c) Jesper Norrman | 
 <a href='mailto:jesper.norrman@gmail.com' title="Mail me"><span class="flaticon-new5"></span></a>
 <a href='https://github.com/djeppe' title="GitHub"><span class="flaticon-github7"></span></a>

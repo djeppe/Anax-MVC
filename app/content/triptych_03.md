@@ -1,0 +1,3 @@
+...
+====================================
+A photographic triptych is a common style used in modern commercial artwork. The photographs are usually arranged with a plain border between them. The work may consist of separate images that are variants on a theme, or may be one larger image split into three.
