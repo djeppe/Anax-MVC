@@ -51,7 +51,7 @@ $app->router->add('', function() use ($app) {
         'name'      => null,
         'content'   => null,
         'output'    => null,
-    ]);	
+    ], 'main');	
 	
 	$app->views->add('me/theme', [
 		'content' => $byline,

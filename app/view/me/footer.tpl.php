@@ -1,6 +1,5 @@
 <footer>
 <span class='sitefooter_me'>
-<hr>
 <div class="copyright left">
 Copyright (c) Jesper Norrman ||| Contact me  -->
 </div>

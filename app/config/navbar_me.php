@@ -24,26 +24,33 @@ return [
             'url'   => 'redovisning',   
             'title' => 'Redovisning av kursmoment',
 
-/*            // Here we add the submenu, with some menu items, as part of a existing menu item
+            // Here we add the submenu, with some menu items, as part of a existing menu item
             'submenu' => [
 
                 'items' => [
 
                     // This is a menu item of the submenu
                     'item 1'  => [
-                        'text'  => 'Item 1',   
-                        'url'   => 'item1.php',  
-                        'title' => 'Some item 1'
+                        'text'  => 'Kmom01',   
+                        'url'   => 'redovisning#kmom01',  
+                        'title' => 'Kursmoment 1'
                     ],
 
                     // This is a menu item of the submenu
                     'item 2'  => [
-                        'text'  => 'Item 2',   
-                        'url'   => 'item2.php',  
-                        'title' => 'Some item 2'
+                        'text'  => 'Kmom02',   
+                        'url'   => 'redovisning#kmom02',  
+                        'title' => 'Kursmoment 2'
+                    ],
+                    
+                    // This is a menu item of the submenu
+                    'item 3'  => [
+                        'text'  => 'Kmom03',   
+                        'url'   => 'redovisning#kmom03',  
+                        'title' => 'Kursmoment 3'
                     ],
                 ],
-            ],*/
+            ],
         ],
         
         // This is a menu item

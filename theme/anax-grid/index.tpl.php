@@ -60,10 +60,13 @@
 </div>
 <?php endif; ?>
 
-<?php if ($this->views->hasContent('footer')) :?>
-<div id='footer'><?php $this->views->render('footer')?></div>
-<?php endif; ?>
 
 </div>
+
+<?php if ($this->views->hasContent('footer')) :?>
+<div id='footer'>
+	<div class="inner"><?php $this->views->render('footer')?></div>
+</div>
+<?php endif; ?>
 
 </html>
