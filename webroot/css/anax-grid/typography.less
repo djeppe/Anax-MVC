@@ -2,7 +2,8 @@
  * Typography settings for a default rythm.
  *
  */
-
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans+Mono);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Condensed);
 
 /** --------------------------------------------------------------
  * Body
@@ -129,6 +130,7 @@ ul,
 ol {
   margin: 0 0 @magicNumber 0;
   padding-left: 1.5em;
+  padding-right: 1.5em;
   p { 
     margin-top: @magicNumber / 2;
     margin-bottom: @magicNumber / 2;
@@ -238,7 +240,15 @@ article tfoot,
   font-style: italic;
 }
 
+.sitetitle {
+	font-family: @fontFamilyUbuntu;
+	font-size: 48px;
+}
 
+.navbar {
+	font-family: @fontFamilyUbuntu;
+	font-size: 16px; 
+}
 
 /** --------------------------------------------------------------
  * More
@@ -247,4 +257,29 @@ hr {
   color: @colorBorderLight;  
   border-color: @colorBorderLight;
   margin: @magicNumber auto;
+}
+
+a {
+	transition:all .5s .1s;
+	-moz-transition:all .5s .1s;
+	-ms-transition:all .5s .1s;
+	-o-transition:all .5s .1s;
+	-webkit-transition:all .5s .1s;
+}
+
+#sidebar a {
+	color: @colorLinksStandard;
+	text-decoration: none;
+}
+
+#sidebar a:hover {
+	color: @colorLinksHover;
+}
+
+.flat_icons a {
+	color: gray;
+}
+
+.flat_icons a:hover {
+	color: @colorLinksHover;
 }

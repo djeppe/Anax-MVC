@@ -11,13 +11,18 @@
 <script src='<?=$this->url->asset($modernizr)?>'></script>
 </head>
 
-<div id='wrapper'>
-
-<div id='header'><?php $this->views->render('header')?></div>
+<div id='header'>
+<div class='inner'><?php $this->views->render('header')?></div>
+</div>
 
 <?php if ($this->views->hasContent('navbar')) :?>
-<div id='navbar'><?php $this->views->render('navbar')?></div>
+<div id='navbar'>
+<div class="inner"><?php $this->views->render('navbar')?></div>
+</div>
 <?php endif; ?>
+
+<div id='wrapper'>
+
 
 <?php if ($this->views->hasContent('flash')) :?>
 <div id='flash'><?php $this->views->render('flash')?></div>

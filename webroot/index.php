@@ -30,11 +30,6 @@ $app->router->add('', function() use ($app) {
         'byline' => $byline,
     ]);*/
     
-	$app->views->add('me/page', [
-		'content' => '',
-		'byline'  => null,
-	], 'flash');
-	
 	$app->views->add('me/theme', [
 		'content' => $content,
 		'byline'  => $byline,
@@ -109,33 +104,38 @@ $app->router->add('theme', function() use ($app) {
     $byline = $app->textFilter->doFilter($byline, 'shortcode, markdown');
 
 	$app->views->add('me/theme', [
-		'content' => '<img width="940" alt="Landscape" src="http://www.phoenixdodgeball.com/wp-content/uploads/2014/04/star-wars-banner.jpg">',
+		'content' => '<img width="940" alt="Landscape" src="img/banner/starwars.jpg">',
 		'byline'  => null,
 	], 'flash');
 	
 	$app->views->add('me/theme', [
-		'content' => '<a href="regioner"><img src="img/drupal.png" alt="Här skulle varit en bild minsann."></a>',
+		'content' => '<a href="regioner"><img src="img/links/drupal.jpg" alt="Här skulle varit en bild minsann."></a>',
 		'byline'  => null,
 	], 'featured-1');
 	
 	$app->views->add('me/theme', [
-		'content' => '<a href="grid"><img src="img/semantic-grid.jpg" alt="Här skulle det också varit en bild. En fin bild."></a>',
+		'content' => '<a href="grid"><img src="img/links/semantic-grid.jpg" alt="Här skulle det också varit en bild. En fin bild."></a>',
 		'byline'  => $byline,
 	], 'featured-2');
-	
-	$img = $app->fileContent->get('f_img01.md');
+
 	$app->views->add('me/theme', [
-		'content' => '<a href="font-awesome"><img src="img/font-awesome.png" alt="Här skulle varit en bild."></a>',
+		'content' => '<a href="font-awesome"><img src="img/links/font-awesome.jpg" alt="Här skulle varit en bild."></a>',
 		'byline'  => null,
 	], 'featured-3');
 	
+	$content = $app->fileContent->get('lorem.md');
+    $content = $app->textFilter->doFilter($content, 'shortcode, markdown');
+    $content = '<h1>Main</h1>' . $content;
 	$app->views->add('me/theme', [
-		'content' => 'main',
+		'content' => $content,
 		'byline'  => null,
 	], 'main');
 	
+	$content = $app->fileContent->get('lorem2.md');
+    $content = $app->textFilter->doFilter($content, 'shortcode, markdown');
+    $content = '<h1>Sidebar</h1>' . $content;
 	$app->views->add('me/theme', [
-		'content' => 'sidebar',
+		'content' => $content,
 		'byline'  => null,
 	], 'sidebar');
 	
