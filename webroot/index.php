@@ -32,7 +32,7 @@ $app->router->add('', function() use ($app) {
     
 	$app->views->add('me/theme', [
 		'content' => $content,
-		'byline'  => $byline,
+		'byline'  => null,
 	], 'main');
 	
 	$app->views->add('me/theme', [
@@ -53,9 +53,9 @@ $app->router->add('', function() use ($app) {
         'output'    => null,
     ], 'main');	
 	
-	$app->views->add('me/theme', [
-		'content' => $byline,
-		'byline'  => null,
+	$app->views->add('me/page', [
+		'content' => null,
+		'byline'  => $byline,
 	], 'main');    
 });
 
