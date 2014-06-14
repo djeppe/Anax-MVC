@@ -365,7 +365,7 @@ body {
   min-height: 330px;
 }
 #footer {
-  height: 110px;
+  height: 66px;
   margin: 0 auto;
   padding-top: 22px;
   width: 100%;
@@ -678,8 +678,6 @@ nav a:hover {
 }
 nav {
   padding: 10px 0;
-  margin-left: 10px;
-  margin-right: 10px;
 }
 nav ul {
   display: table;
