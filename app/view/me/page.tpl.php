@@ -4,9 +4,9 @@
 <?=$content?>
  
 <?php if(isset($byline)) : ?>
-<footer class="byline">
+<div class="byline">
 <?=$byline?>
-</footer>
+</div>
 <?php endif; ?>
 
 </article>

@@ -1,11 +1,66 @@
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767px) {
+
+	header {
+		height: 9 * 22px;
+	}
+	
+	.header_logo {
+		width:100%;
+		background-color: black;
+		padding-bottom: 22px;
+	}
+	
+	.sitetitle {
+		display: block;
+		width:100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.siteslogan {
+		display: block;
+		width:100%;
+		margin: 0 auto;
+		text-align: center;
+	}
+	
+	.navbar {
+		float: left;
+		width: 100%;
+	}
+	
+	.logo {
+	}
+	
+	.navbar {
+	
+	}
+	
+	body {
+		
+	}
+	
+	
 	#flash {
-		.column(@columns / 2);
-		margin-bottom: @magicNumber;
+		margin-bottom: @magicNumber;	
+		max-width: 100%;	
+	}
+	#flash img {
+		//max-width: 100%;
+	}	
+	#featured-1,
+	#featured-2,
+	#featured-3 {
+		float: left;
+		width: 100%;
+	}
+	#main {
+		//float: left;
+		//width: 100%;
 	}
 	#sidebar {
-		display: none;
+		//float: left;
+        //width: 100%;
 	}
     #footer-col-1,
     #footer-col-2,
@@ -14,26 +69,95 @@
         .column(@columns);
         margin-bottom: @magicNumber;
     }
+    
+    #sidebar {
+    	width: 100%;
+    	//display: block;
+	    float: left;
+	    
+    }
+    
+    #sidebar img {
+    	display: block;
+    	margin-left: auto;
+    	margin-right: auto;
+    }
+  
 }
  
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) {
+@media (min-width: 767px) {
+
+	// Centrera logo
+	// Bredda header
+	// Flytta menyn under loggan
+	
+	.header_logo {
+		display:block;
+		width:50%;
+	}
+
+
+	#flash {
+		.column(@columns);
+		margin-bottom: @magicNumber;
+	}
+	#flash img {
+		max-width: 100%;
+	}
+	#main {
+		//width: 100%;
+	}
+	#sidebar {
+		//width: 100%;
+	}
     #footer-col-1,
     #footer-col-2,
     #footer-col-3, 
     #footer-col-4  {
-        .column(@columns / 2);
+        .column(@columns / 1);
         margin-bottom: @magicNumber;
     }
+    
+    #triptych-1,
+    #triptych-2,
+    #triptych-3 {
+	    .column(@columns/2);
+	    margin-bottom: @magicNumber;
+	    max-width: 100%;
+    }
+    
+    .sitefooter_me {
+		margin: 0 auto;
+	}
 }
  
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+	#flash {
+		.column(@columns / 1);
+		margin-bottom: @magicNumber;
+	}
+	#main {
+		float: left;
+		.column(@columns / 3 * 2);
+	}
+	// Sabbar margins???
+	#sidebar {
+		//float: left;
+        //.column(@columns / 3);
+	}
     #footer-col-1,
     #footer-col-2,
     #footer-col-3, 
     #footer-col-4 {
         .column(@columns / 4);
         margin-bottom: @magicNumber;
-    }  
+    }
+    #triptych-1,
+    #triptych-2,
+    #triptych-3 {
+	    .column(@columns/3);
+	    margin-bottom: @magicNumber;
+    } 
 }

@@ -11,21 +11,32 @@
 <script src='<?=$this->url->asset($modernizr)?>'></script>
 </head>
 
-<div id='header'>
-<div class='inner'><?php $this->views->render('header')?></div>
-</div>
 
+
+<header>
+<div class='inner'>
+<!--<div class='inner'><?php $this->views->render('header')?></div> -->
+<?php $this->views->render('header')?>
+<?php $this->views->render('navbar')?>
+</div>
+</header>
+
+
+<!---
 <?php if ($this->views->hasContent('navbar')) :?>
 <div id='navbar'>
 <div class="inner"><?php $this->views->render('navbar')?></div>
 </div>
 <?php endif; ?>
+-->
+<!--<div id='wrapper'>-->
 
-<div id='wrapper'>
-
-
+<main>
+<div class='inner'>
 <?php if ($this->views->hasContent('flash')) :?>
-<div id='flash'><?php $this->views->render('flash')?></div>
+<div id='wrap-flash'>
+	<div id='flash'><?php $this->views->render('flash')?></div>
+</div>
 <?php endif; ?>
 
 <?php  if ($this->views->hasContent('featured-1', 'featured-2', 'featured-3')) : ?>
@@ -60,13 +71,13 @@
 </div>
 <?php endif; ?>
 
-
 </div>
+</main>
 
 <?php if ($this->views->hasContent('footer')) :?>
-<div id='footer'>
+<footer>
 	<div class="inner"><?php $this->views->render('footer')?></div>
-</div>
+</footer>
 <?php endif; ?>
 
 </html>

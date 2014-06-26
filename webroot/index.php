@@ -36,7 +36,7 @@ $app->router->add('', function() use ($app) {
 	], 'main');
 	
 	$app->views->add('me/theme', [
-		'content' => '',
+		'content' => '<img src="img/me/me_01.png" alt="Här skulle varit en bild" max-width="300px";>',
 		'byline'  => null,
 	], 'sidebar');
 	
@@ -53,7 +53,7 @@ $app->router->add('', function() use ($app) {
         'output'    => null,
     ], 'main');	
 	
-	$app->views->add('me/page', [
+	$app->views->add('me/theme', [
 		'content' => null,
 		'byline'  => $byline,
 	], 'main');    
@@ -73,12 +73,12 @@ $app->router->add('redovisning', function() use ($app) {
     
     $app->views->add('me/page', [
 		'content' => $content,
-		'byline'  => $byline,
+		'byline'  => null,
 	], 'main');
 	
 	$app->views->add('me/theme', [
 		'content' => $links,
-		'byline'  => $byline,
+		'byline'  => null,
 	], 'sidebar');
     
     $app->dispatcher->forward([
@@ -97,14 +97,14 @@ $app->router->add('redovisning', function() use ($app) {
 
 $app->router->add('theme', function() use ($app) {
     
-    $app->theme->addStylesheet('css/anax-grid/regions_demo.css');
+    //$app->theme->addStylesheet('css/anax-grid/regions_demo.css');
     $app->theme->setTitle("Mitt Tema");
     
     $byline = $app->fileContent->get('byline.md');
     $byline = $app->textFilter->doFilter($byline, 'shortcode, markdown');
 
 	$app->views->add('me/theme', [
-		'content' => '<img width="940" alt="Landscape" src="img/banner/starwars.jpg">',
+		'content' => '<img alt="Landscape" src="img/banner/starwars.jpg"></img>',
 		'byline'  => null,
 	], 'flash');
 	
@@ -115,7 +115,7 @@ $app->router->add('theme', function() use ($app) {
 	
 	$app->views->add('me/theme', [
 		'content' => '<a href="grid"><img src="img/links/semantic-grid.jpg" alt="Här skulle det också varit en bild. En fin bild."></a>',
-		'byline'  => $byline,
+		'byline'  => null,
 	], 'featured-2');
 
 	$app->views->add('me/theme', [

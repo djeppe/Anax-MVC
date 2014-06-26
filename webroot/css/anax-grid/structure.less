@@ -5,14 +5,23 @@
 /** 
  * General 
  */
-html, body {}
+html, body {
+	min-height: 100%;
+	height: 100%;
+}
 
 body {
     overflow-y: scroll;
+    overflow-x: hidden;
     color: #333;
     font-family: arial, sans-serif;
 }
 
+header, main, footer {
+	position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 /**
@@ -47,7 +56,16 @@ body {
 
 #featured-1,
 #featured-2,
-#featured-3,
+#featured-3 {
+	.column(@columns / 3);
+}
+
+#featured-1 img,
+#featured-2 img,
+#featured-3 img {
+	max-width: 300px;
+}
+
 #triptych-1,
 #triptych-2,
 #triptych-3 {
@@ -87,37 +105,52 @@ body {
     .clearfix();
 }
 
-
+main {
+	//background-color: green;
+	margin: 40px;
+}
 /** 
  * Header 
  */
-#header {
+header {
+	z-index: 2;
     position: relative;
     height: 5 * 22px;
     margin: 0 auto;
-	width: 100%;
+    margin-bottom: 22px;
+	//width: 100%;
 	background-color: rgba(195,234,244,0.92);
+	border-bottom: 22px solid rgba(173,173,173,0.86);
 }
 
 .inner {
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	position: relative;
 	max-width: 960px;	
 }
 
+.header_logo {
+	float: left;
+	width: 50%;
+}
+
 .sitetitle {
-  position: absolute;
-  top: 6px;
-  left: 20px;
+  //position: absolute;
+  //top: 6px;
+  //left: 20px;
+  float: left;
+  margin-left: 22px;
 }
 
 .siteslogan {
-  position: absolute;
-  top: 65px;
-  left: 30px;
+  //position: absolute;
+  //top: 65px;
+  //left: 30px;
+  float: left;
   font-style: italic;
   color: #666;
+  margin-left: 22px;
 }
 
 
@@ -128,25 +161,32 @@ body {
 #navbar {
 	position: relative;
 	height: 3 * 22px;
-	margin: 0 auto;
+	//margin: 0 auto;
 	margin-bottom: 22px;
-	width: 100%;
+	
 	background-color: #F1F1EE;
+	float: left;
 }
 
 .navbar {
-	float: left;
+	width: 50%;
+	float: right;
 }
 
 /**
  * Layout for main
  */
-#main {
-  min-height: 15 * 22px;
+main {
+ 	//min-height: 15 * 22px;
+ 	min-height: 100%;
 }
 
+#wrap-main {
+	margin: 0 auto;
+	max-width: @maxWidth;
+}
 
-#footer {
+footer {
 	height: 5 * 22px;
 	margin: 0 auto;
 	padding-top: 22px;
@@ -155,8 +195,28 @@ body {
 	border-top: black;
 }
 
+.byline {
+	.clearfix();
+	margin-top: 22px;
+	padding: 1.2em;
+	border: 1px solid #ffcb5c;
+	display:block;
+	//color: #666;
+}
+
+.byline p {
+  //margin-top: 0;
+	margin: 0 auto;
+}
+
 .sitefooter {
   color: #666;
+}
+
+.sitefooter_me {
+	display:block;
+	width:340px;
+	margin: 0 auto;
 }
 
 
@@ -174,21 +234,20 @@ body {
   border-bottom: 1px solid #ccc;
 }
 
-.byline {
-  margin-top: 44px;
-  border-top: 1px dashed #ccc;
-  padding-top: 22px;
-  color: #666;
+#logo_wrap {
+	.column(@columns / 2);
 }
 
-.byline p {
-  margin-top: 0;
+#menu_wrap {
+	.column(@columns / 2);
+}
+
+#sidebar img {
+	margin: 0;
+	padding: 22px;
+	max-width: 250px;
 }
 
 .left {
 	float: left;
-}
-
-.right {
-	float: right;
 }

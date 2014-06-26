@@ -199,10 +199,23 @@ body:after {
 body:after {
   clear: both;
 }
+html,
+body {
+  min-height: 100%;
+  height: 100%;
+}
 body {
   overflow-y: scroll;
+  overflow-x: hidden;
   color: #333;
   font-family: arial, sans-serif;
+}
+header,
+main,
+footer {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
 }
 #wrapper {
   margin: 8px auto;
@@ -249,7 +262,17 @@ body {
 }
 #featured-1,
 #featured-2,
-#featured-3,
+#featured-3 {
+  display: inline;
+  float: left;
+  width: 300px;
+  margin: 0 10px;
+}
+#featured-1 img,
+#featured-2 img,
+#featured-3 img {
+  max-width: 300px;
+}
 #triptych-1,
 #triptych-2,
 #triptych-3 {
@@ -325,46 +348,57 @@ body {
 #wrap-footer-col:after {
   clear: both;
 }
-#header {
+main {
+  margin: 40px;
+}
+header {
+  z-index: 2;
   position: relative;
   height: 110px;
   margin: 0 auto;
-  width: 100%;
+  margin-bottom: 22px;
   background-color: rgba(195,234,244,0.92);
+  border-bottom: 22px solid rgba(173,173,173,0.86);
 }
 .inner {
+  position: relative;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
   max-width: 960px;
 }
+.header_logo {
+  float: left;
+  width: 50%;
+}
 .sitetitle {
-  position: absolute;
-  top: 6px;
-  left: 20px;
+  float: left;
+  margin-left: 22px;
 }
 .siteslogan {
-  position: absolute;
-  top: 65px;
-  left: 30px;
+  float: left;
   font-style: italic;
   color: #666;
+  margin-left: 22px;
 }
 #navbar {
   position: relative;
   height: 66px;
-  margin: 0 auto;
   margin-bottom: 22px;
-  width: 100%;
   background-color: #F1F1EE;
-}
-.navbar {
   float: left;
 }
-#main {
-  min-height: 330px;
+.navbar {
+  width: 50%;
+  float: right;
 }
-#footer {
+main {
+  min-height: 100%;
+}
+#wrap-main {
+  margin: 0 auto;
+  max-width: 960px;
+}
+footer {
   height: 110px;
   margin: 0 auto;
   padding-top: 22px;
@@ -372,8 +406,39 @@ body {
   background-color: rgba(195,234,244,0.92);
   border-top: black;
 }
+.byline {
+  *zoom: 1;
+  margin-top: 22px;
+  padding: 1.2em;
+  border: 1px solid #ffcb5c;
+  display: block;
+}
+.byline:before,
+.byline:after {
+  content: "";
+  display: table;
+}
+.byline:after {
+  clear: both;
+}
+.byline:before,
+.byline:after {
+  content: "";
+  display: table;
+}
+.byline:after {
+  clear: both;
+}
+.byline p {
+  margin: 0 auto;
+}
 .sitefooter {
   color: #666;
+}
+.sitefooter_me {
+  display: block;
+  width: 340px;
+  margin: 0 auto;
 }
 .article1 {
   border-right: 1px solid #ccc;
@@ -383,20 +448,25 @@ body {
 .article1 h2 {
   border-bottom: 1px solid #ccc;
 }
-.byline {
-  margin-top: 44px;
-  border-top: 1px dashed #ccc;
-  padding-top: 22px;
-  color: #666;
+#logo_wrap {
+  display: inline;
+  float: left;
+  width: 460px;
+  margin: 0 10px;
 }
-.byline p {
-  margin-top: 0;
+#menu_wrap {
+  display: inline;
+  float: left;
+  width: 460px;
+  margin: 0 10px;
+}
+#sidebar img {
+  margin: 0;
+  padding: 22px;
+  max-width: 250px;
 }
 .left {
   float: left;
-}
-.right {
-  float: right;
 }
 body {
   font: 100.01%/1.375 MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
@@ -664,7 +734,9 @@ a {
 .flat_icons a:hover {
   color: #FFA500;
 }
-* {
+nav,
+ul,
+li {
   transition: all .5s .1s;
   -moz-transition: all .5s .1s;
   -ms-transition: all .5s .1s;
@@ -678,8 +750,8 @@ nav a:hover {
 }
 nav {
   padding: 10px 0;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
 }
 nav ul {
   display: table;
@@ -2400,15 +2472,39 @@ figure.rounded img {
   content: "\f1e2";
 }
 @media (max-width: 767px) {
-  #flash {
-    display: inline;
-    float: left;
-    width: 460px;
-    margin: 0 10px;
-    margin-bottom: 22px;
+  header {
+    height: 198px;
   }
-  #sidebar {
-    display: none;
+  .header_logo {
+    width: 100%;
+    background-color: black;
+    padding-bottom: 22px;
+  }
+  .sitetitle {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .siteslogan {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .navbar {
+    float: left;
+    width: 100%;
+  }
+  #flash {
+    margin-bottom: 22px;
+    max-width: 100%;
+  }
+  #featured-1,
+  #featured-2,
+  #featured-3 {
+    float: left;
+    width: 100%;
   }
   #footer-col-1,
   #footer-col-2,
@@ -2420,20 +2516,69 @@ figure.rounded img {
     margin: 0 10px;
     margin-bottom: 22px;
   }
+  #sidebar {
+    width: 100%;
+    float: left;
+  }
+  #sidebar img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
+  .header_logo {
+    display: block;
+    width: 50%;
+  }
+  #flash {
+    display: inline;
+    float: left;
+    width: 940px;
+    margin: 0 10px;
+    margin-bottom: 22px;
+  }
+  #flash img {
+    max-width: 100%;
+  }
   #footer-col-1,
   #footer-col-2,
   #footer-col-3,
   #footer-col-4 {
     display: inline;
     float: left;
-    width: 460px;
+    width: 940px;
     margin: 0 10px;
     margin-bottom: 22px;
   }
+  #triptych-1,
+  #triptych-2,
+  #triptych-3 {
+    display: inline;
+    float: left;
+    width: 460px;
+    margin: 0 10px;
+    margin-bottom: 22px;
+    max-width: 100%;
+  }
+  .sitefooter_me {
+    margin: 0 auto;
+  }
 }
 @media (min-width: 992px) {
+  #flash {
+    display: inline;
+    float: left;
+    width: 940px;
+    margin: 0 10px;
+    margin-bottom: 22px;
+  }
+  #main {
+    float: left;
+    display: inline;
+    width: 620px;
+    margin: 0 10px;
+  }
   #footer-col-1,
   #footer-col-2,
   #footer-col-3,
@@ -2444,4 +2589,34 @@ figure.rounded img {
     margin: 0 10px;
     margin-bottom: 22px;
   }
+  #triptych-1,
+  #triptych-2,
+  #triptych-3 {
+    display: inline;
+    float: left;
+    width: 300px;
+    margin: 0 10px;
+    margin-bottom: 22px;
+  }
+}
+label {
+  font-size: smaller;
+}
+input[type=text],
+input[type=password] {
+  font-size: 1.2em;
+  width: 500px;
+}
+input[type=submit],
+input[type=reset] {
+  font-size: 1.2em;
+}
+textarea {
+  font-size: 1.2em;
+  width: 500px;
+  min-height: 200px;
+}
+p.buttons {
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
