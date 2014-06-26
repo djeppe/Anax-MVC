@@ -15,6 +15,11 @@ $di->set('CommentController', function() use ($di) {
     return $controller;
 });
 
+if(isset($_GET['show-grid'])) {
+	$app->theme->addStylesheet('css/anax-grid/display_grid.css');
+}
+
+
 $app->router->add('', function() use ($app) {
     
     $app->theme->setTitle("Min Me-sida");

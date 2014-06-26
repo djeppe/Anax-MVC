@@ -15,35 +15,43 @@ return [
         'theme'  => [
             'text'  => '<i class="fa fa-home"></i> Tema',   
             'url'   => '',  
-            'title' => 'Här va det tema. Tema va det!'
+            'title' => 'Här va det tema. Tema va det!',
+
+            // Here we add the submenu, with some menu items, as part of a existing menu item
+            'submenu' => [
+
+                'items' => [
+
+                    'regions' => [
+			        	'text'	=> 'Regioner',
+			        	'url'	=> 'regioner',
+			        	'title'	=> 'Här va det regioner. Regioner va det här!'
+			        ],
+			        
+			        // This is a menu item
+			        'grid'  => [
+			        	'text'  => 'Rutnät',   
+			            'url'   => 'grid',
+			            'title' => 'Visa rutnätet',
+			        ],
+			         
+			        // This is a menu item
+			        'typography'  => [
+			            'text'  => 'Typografi',   
+			            'url'   => 'typografi',
+			            'title' => 'Typografi',
+			        ],
+			         
+			        // This is a menu item
+			        'font-awesome' => [
+			            'text'  =>'Font Awesome', 
+			            'url'   =>'font-awesome',  
+			            'title' => 'Testa Font Awesome',
+			        ],
+                ],
+            ],
         ],
         
-        'regions' => [
-        	'text'	=> 'Regioner',
-        	'url'	=> 'regioner',
-        	'title'	=> 'Här va det regioner. Regioner va det här!'
-        ],
-        
-        // This is a menu item
-        'grid'  => [
-        	'text'  => 'Rutnät',   
-            'url'   => 'grid',
-            'title' => 'Visa rutnätet',
-        ],
-         
-        // This is a menu item
-        'typography'  => [
-            'text'  => 'Typografi',   
-            'url'   => 'typografi',
-            'title' => 'Typografi',
-        ],
-         
-        // This is a menu item
-        'font-awesome' => [
-            'text'  =>'Font Awesome', 
-            'url'   =>'font-awesome',  
-            'title' => 'Testa Font Awesome',
-        ],
         
         // This is a menu item
         'source' => [

@@ -1,5 +1,5 @@
 /* Extra small devices (phones, less than 768px) */
-@media (max-width: 767px) {
+@media (max-width: 1080px) {
 
 	header {
 		height: 9 * 22px;
@@ -40,28 +40,62 @@
 		
 	}
 	
+	#wrap-flash {
+		//background-color: purple;
+	}
 	
 	#flash {
+		float: none;
+		width: 100%;
 		margin-bottom: @magicNumber;	
-		max-width: 100%;	
+		//background-color: blue;
+		display: block;
+		width: auto;	
 	}
 	#flash img {
-		//max-width: 100%;
+		max-width: 100%;
+		width: auto;
 	}	
+	
 	#featured-1,
 	#featured-2,
 	#featured-3 {
-		float: left;
+		float: none;
+		display: block;
+		width: auto;
+	}
+	
+	#featured-1 img {
+		max-width: 100%;
 		width: 100%;
 	}
+	#featured-2 img {
+		max-width: 100%;
+		width: 100%;
+	}
+	#featured-3 img {
+		max-width: 100%;
+		width: 100%;
+	}
+	
 	#main {
 		//float: left;
-		//width: 100%;
+		width: 100%;
 	}
 	#sidebar {
 		//float: left;
-        //width: 100%;
+        width: 100%;
 	}
+	
+	#triptych-1,
+    #triptych-2,
+    #triptych-3 {
+	    .column(@columns/2);
+	    margin-bottom: @magicNumber;
+	    width: 100%;
+    }
+
+
     #footer-col-1,
     #footer-col-2,
     #footer-col-3, 
@@ -86,6 +120,7 @@
 }
  
 /* Small devices (tablets, 768px and up) */
+/*
 @media (min-width: 767px) {
 
 	// Centrera logo
@@ -131,6 +166,7 @@
 		margin: 0 auto;
 	}
 }
+*/
  
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {

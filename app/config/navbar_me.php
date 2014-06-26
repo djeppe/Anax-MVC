@@ -13,7 +13,7 @@ return [
 
         // This is a menu item
         'home'  => [
-            'text'  => 'Hem',   
+            'text'  => '<i class="fa fa-home"></i> Hem',   
             'url'   => '',  
             'title' => 'Jespers Me-sida'
         ],
